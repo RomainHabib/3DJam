@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 139326314}
   m_Layer: 0
   m_Name: Props
-  m_TagString: Untagged
+  m_TagString: PropContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,6 +1606,8 @@ MonoBehaviour:
   playerInventory: []
   playerHand: {fileID: 1047544903}
   pickupCooldown: 0
+  img1: {fileID: 0}
+  img2: {fileID: 0}
 --- !u!1 &1345855730
 GameObject:
   m_ObjectHideFlags: 0

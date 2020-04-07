@@ -9,10 +9,15 @@ public class MouseLook : MonoBehaviour
     public Transform playerBody;
     float xRotation = 0f;
 
+    public bool lockMouse;
+
     private void Start()
     {
         //--- Pour lock le curseur dans l'écran ---//
+        if (lockMouse)
+        {
         Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     // Update is called once per frame

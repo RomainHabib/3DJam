@@ -9,10 +9,12 @@ public class SelectionFeedback : MonoBehaviour
     [SerializeField] private string selectableTag = "Prop";
     [SerializeField] private Material normalMaterial;
     [SerializeField] private Material selectMaterial;
+    public Sprite inventoryPreview;
 
     [SerializeField] private float rayDistance;
 
     [SerializeField] private Text interactText;
+    [SerializeField] private GameObject interactHud;
 
     private Transform selectionTransform;
 
@@ -20,6 +22,7 @@ public class SelectionFeedback : MonoBehaviour
 
     private void Start()
     {
+        interactHud.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -28,7 +31,6 @@ public class SelectionFeedback : MonoBehaviour
     {
         Selection();
     }
-
 
     void Selection()
     {
@@ -45,7 +47,8 @@ public class SelectionFeedback : MonoBehaviour
         if(Physics.Raycast(ray, out hit, rayDistance))
         {
             var selection = hit.transform;
-            if (selection.CompareTag(selectableTag))
+
+            if (selection.CompareTag(selectableTag) && selection.gameObject != player.GetComponent<Inventory>().inHand)
             {
                 Debug.Log("Facing : " + hit.transform.name);
 
@@ -55,31 +58,24 @@ public class SelectionFeedback : MonoBehaviour
                     selectionRenderer.material = selectMaterial;
                 }
 
+                interactHud.SetActive(true);
                 interactText.text = "Interact : " + hit.transform.name;
                 selectionTransform = selection;
 
-                if (Input.GetKeyDown(KeyCode.E) && !player.GetComponent<Inventory>().pickupCooldown)
+                if (Input.GetKeyDown(KeyCode.F) && selection.gameObject != player.GetComponent<Inventory>().inHand)
                 {
-                    if(player.GetComponent<Inventory>().playerInventory.Count < 1)
-                    {
-                    StartCoroutine(player.GetComponent<Inventory>().PickupCooldown());
-                    Collect(selectionTransform);
-                    }
+                    player.GetComponent<Inventory>().PickUp(selection.gameObject);
                 }
-
             }
             Debug.DrawLine(ray.origin, hit.point, Color.red);
         }
         else
         {
-            interactText.text = "";
+            interactText.text = ""; 
+            interactHud.SetActive(false);
+            transform.GetComponent<Renderer>().material = normalMaterial;
             Debug.DrawLine(ray.origin, ray.origin + ray.direction * rayDistance, Color.green);
         }
-    }
-
-    void Collect(Transform collectable)
-    {
-        player.GetComponent<Inventory>().playerInventory.Add(collectable.gameObject);
     }
 }
 

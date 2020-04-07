@@ -65,7 +65,7 @@ public class Inventory : MonoBehaviour
     public void Drop(GameObject toDrop)
     {
         toDrop.transform.parent = GameObject.FindGameObjectWithTag("PropContainer").transform;
-        toDrop.transform.position = new Vector3(transform.position.x, 2, transform.forward.z + 1);
+        toDrop.transform.position = new Vector3(playerHand.transform.position.x, 2, playerHand.transform.forward.z - 0.3f);
     }
 
     //--- Gère le changement de la main à l'inventaire ---//
@@ -92,6 +92,7 @@ public class Inventory : MonoBehaviour
             inHand.transform.position = playerHand.transform.position;
             inHand.transform.parent = playerHand.transform;
             inHand.transform.rotation = Quaternion.identity;
+            inHand.transform.localScale = inHand.GetComponent<SelectionFeedback>().size;
 
             inHand.SetActive(true);
         }
@@ -125,35 +126,4 @@ public class Inventory : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         pickupCooldown = false;
     }
-
-    //void RefreshInventory()
-    //{
-    //    if(playerInventory.Count == 1)
-    //    {
-    //        playerInventory[0].transform.position = playerHand.transform.position;
-    //        playerInventory[0].transform.parent = playerHand.transform;
-    //        playerInventory[0].transform.rotation = Quaternion.identity;
-    //    }
-
-    //    if(playerInventory.Count == 1)
-    //    {
-    //        if (Input.GetKeyDown(KeyCode.R))
-    //        {
-    //            playerInventory[0].transform.position = playerHand.transform.position;
-    //            playerInventory[0].transform.parent = playerInventory[0].transform.parent;
-
-    //            RaycastHit hit = new RaycastHit();
-    //            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-    //            if(Physics.Raycast(ray, out hit))
-    //            {
-    //                playerInventory[0].transform.parent = GameObject.FindGameObjectWithTag("PropContainer").transform;
-    //               // playerInventory[0].transform.position = new Vector3(transform.position.x + 0.5f, 2.0f, transform.position.z + 0.5f);
-    //                playerInventory[0].transform.position = new Vector3(transform.position.x, 2, transform.forward.z + 1);
-    //            }
-
-    //            playerInventory.Remove(playerInventory[0]);
-    //        }
-    //    }
-    //}
 }

@@ -149,13 +149,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1345855734}
+  - {fileID: 1894846356}
   - {fileID: 608123504}
   - {fileID: 1624007594}
   - {fileID: 751333572}
   - {fileID: 952542858}
   - {fileID: 836584998}
   - {fileID: 1017803303}
-  - {fileID: 1894846356}
   - {fileID: 907013024}
   - {fileID: 1162730669}
   m_Father: {fileID: 0}
@@ -456,11 +456,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608123503}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.636, z: 3.467816}
-  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.19297644}
+  m_LocalPosition: {x: 0, y: -2.666, z: 3.469}
+  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.291272}
   m_Children: []
   m_Father: {fileID: 139326314}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &608123505
 BoxCollider:
@@ -493,7 +493,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
+  - {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -550,13 +550,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca7514f663efbd47872af6a496b5751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Prop
-  normalMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
-  selectMaterial: {fileID: 2100000, guid: fcd73305b8a551945baf8ca65349db46, type: 2}
+  isHovered: 0
+  size: {x: 0, y: 0, z: 0}
+  normalMaterial: {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
+  selectMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
   inventoryPreview: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  rayDistance: 1.5
-  interactText: {fileID: 1609646599}
-  interactHud: {fileID: 917731341}
   player: {fileID: 0}
 --- !u!1 &644655732
 GameObject:
@@ -852,11 +850,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751333571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.352, y: -2.636, z: 3.467816}
-  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.19297644}
+  m_LocalPosition: {x: -0.352, y: -2.666, z: 3.469}
+  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.291272}
   m_Children: []
   m_Father: {fileID: 139326314}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &751333573
 Rigidbody:
@@ -905,7 +903,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
+  - {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -946,13 +944,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca7514f663efbd47872af6a496b5751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Prop
-  normalMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
-  selectMaterial: {fileID: 2100000, guid: fcd73305b8a551945baf8ca65349db46, type: 2}
+  isHovered: 0
+  size: {x: 0, y: 0, z: 0}
+  normalMaterial: {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
+  selectMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
   inventoryPreview: {fileID: 0}
-  rayDistance: 1.5
-  interactText: {fileID: 1609646599}
-  interactHud: {fileID: 917731341}
   player: {fileID: 0}
 --- !u!1 &798648514
 GameObject:
@@ -1057,11 +1053,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836584997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.179, y: -2.307, z: 3.467816}
-  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.19297644}
+  m_LocalPosition: {x: 0.179, y: -2.337, z: 3.469}
+  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.291272}
   m_Children: []
   m_Father: {fileID: 139326314}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &836584999
 Rigidbody:
@@ -1110,7 +1106,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
+  - {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1151,13 +1147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca7514f663efbd47872af6a496b5751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Prop
-  normalMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
-  selectMaterial: {fileID: 2100000, guid: fcd73305b8a551945baf8ca65349db46, type: 2}
+  isHovered: 0
+  size: {x: 0, y: 0, z: 0}
+  normalMaterial: {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
+  selectMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
   inventoryPreview: {fileID: 0}
-  rayDistance: 1.5
-  interactText: {fileID: 1609646599}
-  interactHud: {fileID: 917731341}
   player: {fileID: 0}
 --- !u!1 &907013023
 GameObject:
@@ -1282,13 +1276,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca7514f663efbd47872af6a496b5751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Prop
+  isHovered: 0
+  size: {x: 0, y: 0, z: 0}
   normalMaterial: {fileID: 2100000, guid: 2dee1c621f3295f4f8a6bef43afa9196, type: 2}
-  selectMaterial: {fileID: 2100000, guid: fcd73305b8a551945baf8ca65349db46, type: 2}
+  selectMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
   inventoryPreview: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  rayDistance: 1.5
-  interactText: {fileID: 1609646599}
-  interactHud: {fileID: 917731341}
   player: {fileID: 0}
 --- !u!1 &917731341
 GameObject:
@@ -1358,11 +1350,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952542857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.151, y: -2.307, z: 3.467816}
-  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.19297644}
+  m_LocalPosition: {x: -0.151, y: -2.337, z: 3.469}
+  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.291272}
   m_Children: []
   m_Father: {fileID: 139326314}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &952542859
 Rigidbody:
@@ -1411,7 +1403,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
+  - {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1452,13 +1444,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca7514f663efbd47872af6a496b5751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Prop
-  normalMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
-  selectMaterial: {fileID: 2100000, guid: fcd73305b8a551945baf8ca65349db46, type: 2}
+  isHovered: 0
+  size: {x: 0, y: 0, z: 0}
+  normalMaterial: {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
+  selectMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
   inventoryPreview: {fileID: 0}
-  rayDistance: 1.5
-  interactText: {fileID: 1609646599}
-  interactHud: {fileID: 917731341}
   player: {fileID: 0}
 --- !u!1 &1017803302
 GameObject:
@@ -1489,11 +1479,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017803302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.028, y: -1.971, z: 3.467816}
-  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.19297644}
+  m_LocalPosition: {x: 0.028, y: -2.001, z: 3.469}
+  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.291272}
   m_Children: []
   m_Father: {fileID: 139326314}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1017803304
 Rigidbody:
@@ -1542,7 +1532,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
+  - {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1583,13 +1573,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca7514f663efbd47872af6a496b5751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Prop
-  normalMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
-  selectMaterial: {fileID: 2100000, guid: fcd73305b8a551945baf8ca65349db46, type: 2}
+  isHovered: 0
+  size: {x: 0, y: 0, z: 0}
+  normalMaterial: {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
+  selectMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
   inventoryPreview: {fileID: 0}
-  rayDistance: 1.5
-  interactText: {fileID: 1609646599}
-  interactHud: {fileID: 917731341}
   player: {fileID: 0}
 --- !u!1 &1041548153
 GameObject:
@@ -1798,13 +1786,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca7514f663efbd47872af6a496b5751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Prop
+  isHovered: 0
+  size: {x: 0, y: 0, z: 0}
   normalMaterial: {fileID: 2100000, guid: 2dee1c621f3295f4f8a6bef43afa9196, type: 2}
-  selectMaterial: {fileID: 2100000, guid: fcd73305b8a551945baf8ca65349db46, type: 2}
+  selectMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
   inventoryPreview: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  rayDistance: 1.5
-  interactText: {fileID: 1609646599}
-  interactHud: {fileID: 917731341}
   player: {fileID: 0}
 --- !u!54 &1162730671
 Rigidbody:
@@ -1981,6 +1967,10 @@ MonoBehaviour:
   mouseSensitivity: 100
   playerBody: {fileID: 1325570129}
   lockMouse: 1
+  rayDistance: 2
+  selectableTag: Prop
+  interactText: {fileID: 1609646599}
+  interactHud: {fileID: 917731341}
 --- !u!1 &1283150409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,7 +2392,7 @@ GameObject:
   - component: {fileID: 1609646600}
   - component: {fileID: 1609646599}
   m_Layer: 5
-  m_Name: FacingText
+  m_Name: Interact Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2496,11 +2486,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624007593}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.372, y: -2.636, z: 3.467816}
-  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.19297644}
+  m_LocalPosition: {x: 0.372, y: -2.666, z: 3.469}
+  m_LocalScale: {x: 0.29127198, y: 0.29127198, z: 0.291272}
   m_Children: []
   m_Father: {fileID: 139326314}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1624007595
 Rigidbody:
@@ -2549,7 +2539,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
+  - {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2590,13 +2580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca7514f663efbd47872af6a496b5751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Prop
-  normalMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
-  selectMaterial: {fileID: 2100000, guid: fcd73305b8a551945baf8ca65349db46, type: 2}
+  isHovered: 0
+  size: {x: 0, y: 0, z: 0}
+  normalMaterial: {fileID: 2100000, guid: 7f6b86a3e00d6c244a20da59f7ddec76, type: 2}
+  selectMaterial: {fileID: 2100000, guid: 79330b5b714ed0d40aedf2b09ac7501b, type: 2}
   inventoryPreview: {fileID: 0}
-  rayDistance: 1.5
-  interactText: {fileID: 1609646599}
-  interactHud: {fileID: 917731341}
   player: {fileID: 0}
 --- !u!1 &1672566863
 GameObject:
@@ -2902,7 +2890,7 @@ Transform:
   - {fileID: 1865177778}
   - {fileID: 1078887764}
   m_Father: {fileID: 139326314}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949753804
 GameObject:

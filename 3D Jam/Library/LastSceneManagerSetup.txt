@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Romor.unity
+- path: Assets/Scenes/Louis.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

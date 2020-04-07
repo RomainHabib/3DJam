@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
    // public GameManager gm;
-
+   
     public float speed = 12f;
 
     public float gravity = -19.62f;

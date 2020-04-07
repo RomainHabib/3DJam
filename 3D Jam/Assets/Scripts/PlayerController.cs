@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float gravity = -19.62f;
     Vector3 velocity;
 
+    [Header("Ground Setup")]
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        //--- Reset de la vélocity ---//
+        //--- Reset de la vélocité ---//
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)

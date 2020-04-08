@@ -52,7 +52,7 @@ public class SelectionManager : MonoBehaviour
             Debug.DrawLine(ray.origin, ray.origin + ray.direction * rayMaxDistance, Color.green);
         }
 
-        /*
+        
         //--- Pour le raycast de gauche ---//
         if (Physics.Raycast(leftRay, out hitInfo, rayMaxDistance))
         {
@@ -72,6 +72,6 @@ public class SelectionManager : MonoBehaviour
         {
             Debug.DrawLine(rightRay.origin, rightRay.origin + rightRay.direction * rayMaxDistance, Color.green);
         }
-        */
+        
     }
 }

@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
    // public GameManager gm;
-
+   
     public float speed = 12f;
 
     public float gravity = -19.62f;
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
+        Crouch();
     }
 
     void Move()
@@ -58,5 +59,18 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    //--- Gère l'accroupissement du joueur ---//
+    void Crouch()
+    {
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            transform.localScale = new Vector3(1, 0.35f, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 }
